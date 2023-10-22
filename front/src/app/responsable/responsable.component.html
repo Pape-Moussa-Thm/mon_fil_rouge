@@ -1,0 +1,51 @@
+<!-- responsable.component.html -->
+
+<div class="flex justify-center h-40">
+    <nav class="relative px-4 py-4 flex justify-between items-center w-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-900 via-purple-900 to-slate-900">
+        <a class="text-3xl font-bold leading-none w-40 h-30" >
+            <!-- Contenu de votre logo -->
+            <img src="assets/S.A.jpg" alt="SONATEL ACADEMY" width="150" height="50">
+        </a>
+
+        <!-- Menu Burger pour les petits écrans -->
+        <!-- <div class="lg:hidden">
+            <button class="navbar-burger flex items-center text-blue-600 p-3">
+                <svg class="block h-6 w-6 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Mobile menu</title>
+
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+            </button>
+        </div> -->
+
+        <!-- Menu de navigation en mode web et petit écran -->
+        <ul class="lg:flex font-bold lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+            <li><a class="  text-white text-blue-600 hover:text-gray-500" href="/voirsession">Acceuil</a></li>
+            <li><a class="text-white text-blue-600 hover:text-gray-500" href="/gestionclasse">Gestion classes</a></li>
+            <li><a class="text-white text-blue-600 font-bold hover:text-gray-500" href="/listercour">Lister cours</a></li>
+            <!-- <li><a class="text-sm text-blue-600 hover:text-gray-500" href="/etudiant">Gestion Etudiants</a></li> -->
+            <!-- Ajoutez d'autres éléments de menu ici -->
+            <li>
+                <!-- Icône de déconnexion -->
+                <div ></div>
+                <a class="text-white text-blue-600 hover:text-gray-500" >
+                    <svg class="h-6 w-6 fill-current inline-block" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" (click)="logout()" >
+                        <title>Déconnexion</title>
+                        <path d="M10 12h8v1h-8v-1zm0-8v5h8V4h-8z"/>
+                    </svg>
+
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Contenu dynamique du composant enfant -->
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+
+    <!-- Pied de page -->
+    <footer class="page-footer">
+        <!-- Contenu du pied de page -->
+    </footer>
+</div>
